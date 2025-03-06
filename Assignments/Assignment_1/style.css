@@ -118,4 +118,40 @@ p {
     padding-left: 40px;
 }
 
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
 
+}
+.about .box .year_company {
+    min-width: 150px;
+    margin-bottom: 10px;
+}
+.about .box .year_company h5 {
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    color: #3590d2;
+    font-size: 16px;
+    margin: 0;
+}
+.company {
+    color: #333;
+}
+
+.project_link {
+    text-decoration: none;
+    color: #666;
+}
+.project {
+    display: flex;
+    flex-direction: row;
+}
+.projects li {
+    margin: 0 0;
+}
+.project_name {
+    
+}
