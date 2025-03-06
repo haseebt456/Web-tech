@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lucida console' 'Garamond';
 }
 
 body {
@@ -21,7 +21,6 @@ body {
     background: #fff;
     margin: 50px;
     box-shadow: 0 50px 75px rgba(0,0,0,0.1);
-    overflow: hidden;
 }
 
 .container .top {
@@ -56,4 +55,19 @@ body {
     object-fit: cover;
 }
 
-.container
+.container .top .profileText {
+    position: relative;
+    padding: 40px;
+    text-align: left;
+}
+
+.container .top .profileText h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height:30px;
+}
+.container .top .profileText h1 span {
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+}
