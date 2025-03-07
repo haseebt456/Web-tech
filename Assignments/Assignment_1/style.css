@@ -25,16 +25,16 @@ body {
     padding-bottom: 0;
 }
 
-
+.imgBox {
+    margin-top: 30px;
+    margin-right: 100px;
+    float: right;
+}
 .container .top img {
     position: relative;
-    float: left;
-    width: 30%;
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 120px;
     object-fit: cover;
-    margin-right: 100px;
 }
 
 .container .top .profileText {
@@ -50,7 +50,6 @@ body {
     line-height:30px;
 }
 .container .top .profileText h1 span {
-    position: relative;
     font-size: 15px;
     font-weight: 300;
 }
