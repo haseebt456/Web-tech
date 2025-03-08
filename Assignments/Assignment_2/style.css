@@ -16,3 +16,15 @@
 .links a {
     text-decoration: none;
 }
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+}
+header {
+    border-bottom: 4px solid black;
+}
