@@ -28,3 +28,33 @@
 header {
     border-bottom: 4px solid black;
 }
+.banner {
+    width: 100%;
+    max-width: 1024px;
+    height: 304px;
+    background-color: rgb(255,32,40);
+    display: flex;
+    align-items: flex-start ;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.banner div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    width: 100%;
+    padding: 32px;
+    line-height: 48px;
+}
+.banner div a {
+    color: rgb(255, 255, 235);
+    text-decoration: none;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    font-family: sans-serif;
+}
+#offer-link {
+    color:rgba(0, 0, 0, 0.88);
+}
