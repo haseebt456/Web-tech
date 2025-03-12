@@ -30,7 +30,6 @@ header {
 }
 .banner {
     width: 100%;
-    max-width: 1024px;
     height: 304px;
     background-color: rgb(255,32,40);
     display: flex;
@@ -57,4 +56,30 @@ header {
 }
 #offer-link {
     color:rgba(0, 0, 0, 0.88);
+}
+.sizes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 32px;
+    column-gap: 32px;
+    line-height: 24px;
+}
+.sizes h3 {
+    color: rgb(0,0,0);
+    font-size: 48px;
+    font-family: sans-serif;
+    position: relative;
+    letter-spacing: 1.2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 32, 40);
+}
+.sizes a {
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    font-size: 48px;
+    letter-spacing: 1.2px;
+    font-weight: 500;
 }
