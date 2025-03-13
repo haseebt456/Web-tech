@@ -215,6 +215,9 @@ header {
     width: 50%;
 }
 .tile img {
-    object-fit: cover;
+    width: 100%;
+}
+
+.banner-2 img{
     width: 100%;
 }
