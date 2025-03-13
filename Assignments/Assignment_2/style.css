@@ -164,3 +164,23 @@ header {
 .sale-cards a img{
     width: 100%;
 }
+.content-divider {
+    padding: 1rem 1rem;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.content-divider svg {
+    color: rgb(255, 32, 40);
+}
+.two-tiles {
+    display: flex;
+}
+.tile {
+    width: 50%;
+}
+.tile img {
+    object-fit: cover;
+    width: 100%;
+}
