@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+
+}
+.sale-category {
+    height: 66vh;
+    width: 100%;
+}
+.women-sale {
+    background-image: url('https://media.whitestuff.com/i/whitestuff/hp_womensale_wk47_2025_q4_linktile?fmt=auto&qlt=default&w=476');
+}
+.men-sale {
+    background-image: url('https://media.whitestuff.com/i/whitestuff/hp_mensale_wk47_2025_q4_linktile?fmt=auto&qlt=default&w=476');
+}
+.sale-tops {
+    background-image: url('https://media.whitestuff.com/i/whitestuff/hp_topsale_wk47_2025_q4_linktile?fmt=auto&qlt=default&w=476');
+}
+.sale-dresses {
+    background-image: url('https://media.whitestuff.com/i/whitestuff/hp_dresssale_wk47_2025_q4_linktile?fmt=auto&qlt=default&w=476');
+}
+.footer {
+    background: #0f3c46;
+    color: white;
+    padding: 40px 20px;
+}
+.footer h4 {
+    border-bottom: 2px solid #58c6d1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.social-icons i {
+    font-size: 20px;
+    margin-right: 15px;
+}
