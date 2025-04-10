@@ -271,28 +271,22 @@ header {
     display: inline-block;
     transition: transform 0.3s ease;
 } 
+.tile-title a {
+    text-decoration: none;
+    color: blue;
+}
 .banner-2 img{
     width: 100%;
-}
-
-/* 
-
-.rewind-cards {
-    display: flex;
-    height: 100%;
-    width: 100%;
     position: relative;
-    overflow: hidden;
 }
-.rewind-card {
-    width: 100%;
-    line-height: 60px;
-}
-.rewind-card a img {
+.banner-2-text {
     position: absolute;
-    object-fit: cover;
-    z-index: 0;
-} */
+    width: 100%;
+    text-align: center;
+    bottom: 30px;
+} 
+
+
 .rewind85 {
     display: flex;
     flex-direction: column;
