@@ -5,9 +5,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
+.task-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 4px solid black;
+
+}
+.task-links a {
+    text-decoration: none;
+}
 .content div a {
     color: black;
     font-size: 20px;
