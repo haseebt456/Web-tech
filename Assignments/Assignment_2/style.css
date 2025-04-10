@@ -190,7 +190,6 @@ header {
 }
 .sale-categories {
     display: flex;
-    justify-content: space-around;
 }
 .sale-cards {
     position: relative;
@@ -200,17 +199,42 @@ header {
 .sale-cards a img{
     width: 100%;
     height: auto;
-    display: block;
+    object-fit: fill;
 }
-.sale-cards h3 {
+.card-title {
     position: absolute;
-    bottom: 10x;
-    left: 0;
-    right: 0;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
 }
+.card-title span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.card-title span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+   
+  .sale-cards:hover .card-title span {
+    transform: translateY(-10px);
+  }
+  
+  .sale-cards:hover .card-title span::after {
+    width: 50%;
+  }
+  
 .content-divider {
     padding: 1rem 1rem;
     align-content: center;
@@ -226,30 +250,33 @@ header {
 }
 .tile {
     width: 50%;
+    position: relative;
+    text-align: center;
 }
 .tile img {
     width: 100%;
-}
 
+}
+.tile-title {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+.tile-title span,a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+} 
 .banner-2 img{
     width: 100%;
 }
 
-.rewind85 {
-    background-color: rgb(255, 191, 6);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 24px 48px 48px 48px;
-    line-height: 24px;
-}
-.rewind-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: rgb(0,0,0);
-    margin-bottom: 24px;
-}
+/* 
+
 .rewind-cards {
     display: flex;
     height: 100%;
@@ -265,4 +292,88 @@ header {
     position: absolute;
     object-fit: cover;
     z-index: 0;
+} */
+.rewind85 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+.rewind-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(0,0,0);
+    margin-bottom: 24px;
+    text-align: center;
+}
+.rewind-carousel-wrapper {
+    position: relative;
+  }
+  
+  .rewind-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+  
+  .rewind-cards::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .rewind-card {
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: start;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .rewind-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .rewind-card h2 {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .rewind-card #shop-now {
+    font-size: 14px;
+    color: rgb(255, 32, 40);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .rewind-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 0.3rem 0.7rem;
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+  
+  .rewind-arrow:hover {
+    background: rgba(200, 200, 200, 0.9);
+  }
+  
+  .rewind-arrow.left {
+    left: -10px;
+  }
+  
+  .rewind-arrow.right {
+    right: -10px;
+  }
+  
