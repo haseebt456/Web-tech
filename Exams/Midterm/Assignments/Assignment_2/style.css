@@ -1,0 +1,373 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 1rem;
+}
+.action-icons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    list-style: none;
+    color: rgb(39,39,39);
+}
+.links a {
+    text-decoration: none;
+    color: rgb(39,39,39);
+}
+.gbp {
+    margin-right: 0.5rem;
+    padding-right: 5px;
+    border-right: 2px solid rgb(39, 39, 39);
+    border-spacing: 5px;
+}
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding-bottom: 8px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+.nav-bar ul li a{
+    padding: 8px 10px;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    color: rgb(39,39,39);
+}
+#sale {
+    color: rgb(255, 32, 40);
+}
+#rewind {
+    color: rgb(8, 147, 252);
+}
+.logo {
+    font-family: 'Patrick Hand', cursive;
+  font-style: italic;
+  text-decoration: underline;
+
+  color: rgb(39,39,39);
+}
+header {
+    color: rgb(39,39,39);
+    border-bottom: 4px solid black;
+    padding: 1rem 3.5rem;
+    margin: 1px;
+}
+.banner {
+    width: 100%;
+    height: 304px;
+    background-color: rgb(255,32,40);
+    display: flex;
+    align-items: flex-start ;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.banner div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    width: 100%;
+    padding: 32px;
+    line-height: 48px;
+}
+.banner div a {
+    color: rgb(255, 255, 235);
+    text-decoration: none;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+#offer-link {
+    color:rgba(0, 0, 0, 0.88);
+}
+.sizes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 32px;
+    column-gap: 32px;
+    line-height: 24px;
+}
+.sizes h3 {
+    color: rgb(0,0,0);
+    font-size: 48px;
+    position: relative;
+    letter-spacing: 1.2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 32, 40);
+}
+.sizes a {
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    font-size: 48px;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+}
+.app-footer {
+    display: flex;
+    flex-direction:column ;
+    background-color: rgb(27,62,69);
+    margin-top: 32px;
+}
+.website-info {
+    display: flex;
+    padding: 48px 56px;
+}
+.website-info div {
+    color: rgb(255,255,255);
+    padding-right: 12px;
+    line-height: 24px;
+    width: 25%;
+}
+.website-info div h4 {
+    border-bottom: 2px solid rgb(229, 231, 235);
+    border-spacing: 8px;
+}
+.website-info div ul {
+    list-style: none;
+    line-height: 24px;
+    padding-bottom: 24px;
+    padding-top: 12px;
+    text-align: left;
+}
+.website-info div ul li a {
+    color: rgb(255,255,255);
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 56px;
+}
+.social-logos {
+    display: flex;
+    color: rgb(255,255,255);
+    align-items: center;
+}
+.social-logos h5 {
+    margin-right: 32px ;
+    font-size: 20px;
+    font-weight: 700;
+}
+.social-logos div a {
+    padding: 2px;
+}
+.contact-info img {
+    width: 32px;
+}
+.website-logo {
+    width: 960px;
+    margin-left: 15px;
+    display: flex;
+    justify-self: center;
+}
+.footer-logo p {
+    position: relative;
+    left: 66.6%;
+    font-size: 16px;
+    font-weight: 400;
+    color:rgb(255,255,255);
+}
+.sale-categories {
+    display: flex;
+}
+.sale-cards {
+    position: relative;
+    width: 24%;
+    text-align: center;
+}
+.sale-cards a img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+.card-title {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+.card-title span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.card-title span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+   
+  .sale-cards:hover .card-title span {
+    transform: translateY(-10px);
+  }
+  
+  .sale-cards:hover .card-title span::after {
+    width: 50%;
+  }
+  
+.content-divider {
+    padding: 1rem 1rem;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.content-divider svg {
+    color: rgb(255, 32, 40);
+}
+.two-tiles {
+    display: flex;
+}
+.tile {
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+.tile img {
+    width: 100%;
+
+}
+.tile-title {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+.tile-title span,a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+} 
+.tile-title a {
+    text-decoration: none;
+    color: blue;
+}
+.banner-2 img{
+    width: 100%;
+    position: relative;
+}
+.banner-2-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 30px;
+} 
+
+
+.rewind85 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.rewind-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(0,0,0);
+    margin-bottom: 24px;
+    text-align: center;
+}
+.rewind-carousel-wrapper {
+    position: relative;
+  }
+  
+  .rewind-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+  
+  .rewind-cards::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .rewind-card {
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: start;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .rewind-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .rewind-card h2 {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .rewind-card #shop-now {
+    font-size: 14px;
+    color: rgb(255, 32, 40);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .rewind-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 0.3rem 0.7rem;
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+  
+  .rewind-arrow:hover {
+    background: rgba(200, 200, 200, 0.9);
+  }
+  
+  .rewind-arrow.left {
+    left: -10px;
+  }
+  
+  .rewind-arrow.right {
+    right: -10px;
+  }
+  

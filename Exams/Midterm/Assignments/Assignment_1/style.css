@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida console' 'Garamond';
+}
+
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    margin: 50px;
+    box-shadow: 0 50px 75px rgba(0,0,0,0.1);
+}
+
+.container .top {
+    position: relative;
+    padding: 40px;
+    padding-bottom: 0;
+}
+
+.imgBox {
+    margin-top: 30px;
+    margin-right: 100px;
+    float: right;
+}
+.container .top img {
+    position: relative;
+    border-radius: 50%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.container .top .profileText {
+    width: 70%;
+    position: relative;
+    padding: 40px;
+    text-align: left;
+}
+
+.container .top .profileText h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height:30px;
+}
+.container .top .profileText h1 span {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.container .content-section {
+    position: relative;
+    min-height: 500px;
+    padding: 0 40px 40px;
+    overflow: hidden;
+}
+
+.content-section h3 {
+    font-weight: 600;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.content-section ul {
+    position: relative;
+    margin: 10px 0;
+
+}
+.content-section ul li {
+    list-style: none;
+    color: #333;
+    margin: 25px 0;
+    line-height: 10px;
+}
+
+h5 {
+    color: #3590d2;
+}
+h4 {
+    color: #333;
+    font-weight: 500;
+    margin: 5px 0;
+}
+h6 {
+    color: #666;
+    font-weight: 300;
+    font-size: 1em;
+}
+p {
+    font-weight: 300;
+}
+.right-section {
+    width: 70%;
+    float: right;
+    padding-left: 40px;
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+
+}
+.about .box .year_company {
+    min-width: 150px;
+    margin-bottom: 10px;
+}
+.about .box .year_company h5 {
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    color: #3590d2;
+    font-size: 16px;
+    margin: 0;
+}
+.company {
+    color: #333;
+}
+
+.project_link {
+    text-decoration: none;
+    color: #666;
+}
+.project {
+    display: flex;
+    flex-direction: row;
+}
+.projects li {
+    margin: 0 0;
+}
+.project_name {
+    color:black;
+}
