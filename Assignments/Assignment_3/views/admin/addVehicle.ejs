@@ -1,0 +1,19 @@
+<h2>Add Vehicle</h2>
+<form action="/admin/vehicles/add" method="POST" enctype="multipart/form-data" class="container">
+  <div class="mb-3">
+    <label>Name</label><input name="name" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Brand</label><input name="brand" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Price</label><input name="price" type="number" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Type</label><input name="type" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Image</label><input type="file" name="image" class="form-control">
+  </div>
+  <button class="btn btn-primary">Add Vehicle</button>
+</form>

@@ -1,0 +1,22 @@
+<h2>Vehicle List</h2>
+<a href="/admin/vehicles/add" class="btn btn-success mb-2">Add New Vehicle</a>
+<table class="table">
+  <thead>
+    <tr><th>Name</th><th>Brand</th><th>Price</th><th>Type</th><th>Image</th><th>Actions</th></tr>
+  </thead>
+  <tbody>
+    <% vehicles.forEach(v => { %>
+      <tr>
+        <td><%= v.name %></td>
+        <td><%= v.brand %></td>
+        <td>Rs <%= v.price %></td>
+        <td><%= v.type %></td>
+        <td><img src="<%= v.image %>" width="80"></td>
+        <td>
+          <a href="/admin/vehicles/edit/<%= v._id %>" class="btn btn-warning btn-sm">Edit</a>
+          <a href="/admin/vehicles/delete/<%= v._id %>" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/checkout.css">
+<div class="container">
+  <h2>Checkout</h2>
+
+  <% if (cart && cart.length > 0) { %>
+    <form action="/shop/checkout" method="POST">
+      <!-- Shipping Address -->
+      <div class="form-group">
+        <label for="address">Shipping Address</label>
+        <textarea id="address" name="address" required><%= user ? user.address || '' : '' %></textarea>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method</label>
+        <select name="paymentMethod" id="paymentMethod" required>
+          <option value="">Select a payment method</option>
+          <option value="cod">Cash on Delivery</option>
+          <option value="card">Credit/Debit Card</option>
+        </select>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="form-group">
+        <h3>Order Summary</h3>
+        <div class="summary">
+          <% let total = 0; %>
+          <% cart.forEach(item => {
+               let subtotal = item.price * item.quantity;
+               total += subtotal;
+          %>
+            <div class="summary-item">
+              <div>
+                <%= item.name %> (Size: <%= item.size %>, Qty: <%= item.quantity %>)
+              </div>
+              <div>Rs <%= subtotal %></div>
+            </div>
+          <% }); %>
+          <div class="summary-item total">
+            <div>Total</div>
+            <div>Rs <%= total %></div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary">Place Order</button>
+    </form>
+  <% } else { %>
+    <p>Your cart is empty. <a href="/products">Go shopping</a></p>
+  <% } %>
+</div>

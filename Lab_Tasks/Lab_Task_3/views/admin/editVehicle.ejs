@@ -1,0 +1,23 @@
+<h2>Edit Vehicle</h2>
+<form action="/admin/vehicles/edit/<%= vehicle._id %>" method="POST" enctype="multipart/form-data" class="container">
+  <div class="mb-3">
+    <label>Name</label><input name="name" class="form-control" value="<%= vehicle.name %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Brand</label><input name="brand" class="form-control" value="<%= vehicle.brand %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Price</label><input name="price" type="number" class="form-control" value="<%= vehicle.price %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Type</label><input name="type" class="form-control" value="<%= vehicle.type %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Current Image</label><br>
+    <img src="<%= vehicle.image %>" width="100">
+  </div>
+  <div class="mb-3">
+    <label>Change Image</label><input type="file" name="image" class="form-control">
+  </div>
+  <button class="btn btn-primary">Update Vehicle</button>
+</form>
