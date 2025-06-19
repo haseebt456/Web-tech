@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/shop.css">
+
+<main class="shop-container">
+  <h2 class="heading">Our Products</h2>
+  <p class="page-info">Page <%= page %> of <%= totalPages %></p>
+
+  <!-- Category Filter -->
+  <form method="GET" action="/shop/1" class="category-filter">
+    <label for="category">Filter by Category:</label>
+    <select name="category" id="category" onchange="this.form.submit()">
+      <option value="">All Categories</option>
+      <% categories.forEach(cat => { %>
+        <option value="<%= cat %>" <%= selectedCategory === cat ? 'selected' : '' %>><%= cat %></option>
+      <% }) %>
+    </select>
+  </form>
+
+  <!-- Product Cards Grid -->
+  <section class="product-grid">
+    <% for (let i = 0; i < products.length; i++) { %>
+      <div class="product-card">
+        <img src="/images/uploaded/<%= products[i].image %>" alt="<%= products[i].name %>" class="product-img" />
+        <div class="product-content">
+          <h3 class="product-name"><%= products[i].name %></h3>
+          <p class="product-price">Rs <%= products[i].price %></p>
+          <a href="/shop/add-cart/<%= products[i]._id %>" class="add-to-cart">Add to Cart</a>
+        </div>
+      </div>
+    <% } %>
+  </section>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <% if (page > 1) { %>
+      <a class="page-link" href="/shop/<%= page - 1 %>?category=<%= encodeURIComponent(selectedCategory) %>">« Prev</a>
+    <% } %>
+
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <a class="page-link <%= page === i ? 'active' : '' %>" href="/shop/<%= i %>?category=<%= encodeURIComponent(selectedCategory) %>"><%= i %></a>
+    <% } %>
+
+    <% if (page < totalPages) { %>
+      <a class="page-link" href="/shop/<%= page + 1 %>?category=<%= encodeURIComponent(selectedCategory) %>">Next »</a>
+    <% } %>
+  </div>
+</main>
