@@ -5,7 +5,7 @@ async function sessionAuth(req,res,next) {
   if(req.session.user)
   {
     res.locals.isAdmin= Boolean(
-      req.session.user.role.find((r) => r == 'Admin')
+      req.session.user.role.find((r) => r == 'admin')
     )
     console.log(res.locals.isAdmin)
   }

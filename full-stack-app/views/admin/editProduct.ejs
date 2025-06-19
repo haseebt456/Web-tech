@@ -1,0 +1,24 @@
+
+<h2>Edit Product</h2>
+<form action="/admin/products/edit/<%= product._id %>" method="POST" enctype="multipart/form-data" class="container">
+  <div class="mb-3">
+    <label>Name</label><input name="name" class="form-control" value="<%= product.name %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Price</label><input name="price" class="form-control" value="<%= product.price %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Size</label><input name="size" class="form-control" value="<%= product.size %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Department</label><input name="department" class="form-control" value="<%= product.department %>" required>
+  </div>
+  <div class="mb-3">
+    <label>Current Image</label><br>
+    <img src="<%= product.image %>" width="100">
+  </div>
+  <div class="mb-3">
+    <label>Change Image</label><input type="file" name="image" class="form-control">
+  </div>
+  <button class="btn btn-primary">Update Product</button>
+</form>

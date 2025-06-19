@@ -121,7 +121,7 @@ const userId = req.session.user ? req.session.user._id : null;
 router.get('/:page?', async (req, res, next) => {
   const categories = [
     'Sale', 'Men', 'Women', 'Accessories', 'Footwear',
-    "Rewind'85", 'Other Stuff', 'Sustainability'
+    "Rewind'85", 'Other Stuff', 'Sustainability','Vehicles'
   ];
 
   console.log('Inside shop page route');

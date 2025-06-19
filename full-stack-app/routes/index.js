@@ -45,7 +45,7 @@
     })
     
     router.post('/register', async (req, res, next) => {
-  const { name, email, password, confirmPassword } = req.body;
+  const { role,name, email, password, confirmPassword } = req.body;
 
   if (password !== confirmPassword) {
     req.flash("danger", "Passwords do not match");
@@ -65,7 +65,7 @@
     name,
     email,
     password: hashedPassword,
-    role: ['user'] // optional default role
+    role: [role]
   });
 
   await user.save();

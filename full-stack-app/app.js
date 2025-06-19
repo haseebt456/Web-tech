@@ -10,6 +10,10 @@ let shopRouter = require('./routes/shop')
 let sessionAuth = require('./middlewares/sessionAuth')
 let checkSessionAuth = require('./middlewares/checkSessionAuth')
 let logger = require('./middlewares/logger')
+const adminProductRoutes = require('./routes/adminProducts');
+
+const adminVehicleRoutes = require('./routes/adminVehicle');
+const publicVehicleRoutes = require('./routes/vehicle');
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -28,14 +32,12 @@ app.use(session({
   resave: true,
   saveUninitialized: true,
   cookie: {
-    maxAge: 1000 * 60 * 60,     // 1 hour
+    maxAge: 1000 * 60 * 60, 
     httpOnly: true,
-    sameSite: 'lax'             // helps with browser compatibility
-    // secure: true             // only set `secure` if using HTTPS
+    sameSite: 'lax'      
   }
 }));
 
-//app.set("views", path.join(__dirname, "views"));
 app.set("view engine","ejs")
 app.use(express.static("public"));
 app.use(expressLayouts)
@@ -46,7 +48,9 @@ app.use(cookieParser());
 app.use('/',logger,sessionAuth,indexRouter)
 app.use('/myAccount',logger,sessionAuth,checkSessionAuth,myAccount)
 app.use('/shop',logger,sessionAuth,shopRouter)
-
+app.use('/admin', adminVehicleRoutes);
+app.use('/admin',adminProductRoutes)
+app.use('/vehicles', publicVehicleRoutes);
 
 
 connectionString = ' mongodb://localhost:27017/myFullStackApp'
