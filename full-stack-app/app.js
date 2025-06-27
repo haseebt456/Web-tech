@@ -15,10 +15,9 @@ const adminProductRoutes = require('./routes/adminProducts');
 const adminVehicleRoutes = require('./routes/adminVehicle');
 const publicVehicleRoutes = require('./routes/vehicle');
 
-var bodyParser = require("body-parser");
-app.use(bodyParser.json());
+app.use(express.json());
 // for parsing application/xwww-
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 /* 
 app.use(session({
     secret: 'mysession',
@@ -44,19 +43,20 @@ app.use(expressLayouts)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(logger)
 
-app.use('/',logger,sessionAuth,indexRouter)
-app.use('/myAccount',logger,sessionAuth,checkSessionAuth,myAccount)
-app.use('/shop',logger,sessionAuth,shopRouter)
+app.use('/',sessionAuth,indexRouter)
+app.use('/myAccount',sessionAuth,checkSessionAuth,myAccount)
+app.use('/shop',sessionAuth,shopRouter)
 app.use('/admin', adminVehicleRoutes);
 app.use('/admin',adminProductRoutes)
 app.use('/vehicles', publicVehicleRoutes);
 
 
 connectionString = ' mongodb://localhost:27017/myFullStackApp'
-mongoose
+const connectionPromise = mongoose
   .connect(connectionString, { useUnifiedTopology: true, useNewUrlParser: true})
-  .then(() => console.log("Connected to " + connectionString))
+  connectionPromise.then(() => console.log("Connected to " + connectionString))
   .catch((error) => console.log(error.message));
 
 app.listen(3000, ()=>{
